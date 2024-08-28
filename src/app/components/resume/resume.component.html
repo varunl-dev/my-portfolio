@@ -1,0 +1,52 @@
+<div>
+  <h1 class="title">work experience</h1>
+  <div class="resume" *ngFor="let experience of workExperiences">
+    <h2 class="resume__name resume__content">{{ experience?.companyName }}</h2>
+    <h2 class="resume__position resume__content">
+      {{ experience?.position }} | {{ experience?.startDate }} -
+      {{ experience?.endDate }}
+    </h2>
+    <h2 class="resume__tech resume__content">
+      Technologies Used: {{ experience?.technologies }}
+    </h2>
+    <ng-container *ngFor="let project of experience.projects">
+      <h2 class="resume__project resume__content">
+        {{ project?.projectName }} | {{ project?.projectDuration }}
+      </h2>
+      <p class="resume__description">
+        {{ project?.projectDescription }}
+      </p>
+    </ng-container>
+  </div>
+
+  <h1 class="title">education</h1>
+  <div class="resume">
+    <h2 class="resume__name resume__content">
+      Meenakshi Sundararajan Engineering College, Anna University.
+    </h2>
+    <h2 class="resume__project resume__content">
+      2013 - 2017 | Bachelor of Technology - Information Technology.
+    </h2>
+    <h2 class="resume__tech resume__content">CGPA - 7.1</h2>
+  </div>
+  <div class="resume">
+    <h2 class="resume__name resume__content">P C K G Govt Hr Sec School.</h2>
+    <h2 class="resume__project resume__content">
+      2013 - 2011 | Higher Secondary School Certificate.
+    </h2>
+    <h2 class="resume__tech resume__content">Percentage - 74.08%</h2>
+  </div>
+  <div class="resume">
+    <h2 class="resume__name resume__content">P C K G Govt Hr Sec School.</h2>
+    <h2 class="resume__project resume__content">
+      2010 - 2011 | Secondary School Leaving Certificate.
+    </h2>
+    <h2 class="resume__tech resume__content">Percentage - 81%</h2>
+  </div>
+
+  <div class="resume__button-wrapper">
+    <button class="resume__button-wrapper__button" (click)="downloadResume()">
+      Download Resume
+    </button>
+  </div>
+</div>

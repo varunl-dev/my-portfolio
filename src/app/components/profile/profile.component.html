@@ -1,0 +1,101 @@
+<mat-card class="profile-card">
+  <mat-card-header class="profile-card__header">
+    <div class="profile-card__header__content">
+      <img
+        class="profile-card__header__avatar"
+        src="assets/images/my-avatar.png"
+        alt="profile pic"
+      />
+      <p class="profile-card__header__name">{{ name }}</p>
+      <p class="profile-card__header__title">{{ title }}</p>
+    </div>
+  </mat-card-header>
+  <mat-card-content class="profile-card__content">
+    <div class="profile-card__content__divider"></div>
+
+    <div class="profile-card__content__list">
+      <div class="profile-card__content__item">
+        <div class="profile-card__content__icon-box">
+          <div
+            class="profile-card__content__icon profile-card__content__mail-icon"
+          ></div>
+        </div>
+        <div class="profile-card__content__info">
+          <p class="profile-card__content__title">Email</p>
+          <a
+            href="mailto:varunl.3696@gmail.com"
+            class="profile-card__content__value profile-card__content__value--extra"
+          >
+            {{ mailId }}
+          </a>
+        </div>
+      </div>
+
+      <div class="profile-card__content__item">
+        <div class="profile-card__content__icon-box">
+          <div
+            class="profile-card__content__icon profile-card__content__mob-icon"
+          ></div>
+        </div>
+        <div class="profile-card__content__info">
+          <p class="profile-card__content__title">Mobile</p>
+          <a
+            href="tel:9551799309"
+            class="profile-card__content__value profile-card__content__value--extra"
+          >
+            {{ mobile }}
+          </a>
+        </div>
+      </div>
+
+      <div class="profile-card__content__item">
+        <div class="profile-card__content__icon-box">
+          <div
+            class="profile-card__content__icon profile-card__content__dob-icon"
+          ></div>
+        </div>
+        <div class="profile-card__content__info">
+          <p class="profile-card__content__title">Birthday</p>
+          <div class="profile-card__content__value">
+            {{ DOB }}
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card__content__item">
+        <div class="profile-card__content__icon-box">
+          <div
+            class="profile-card__content__icon profile-card__content__location-icon"
+          ></div>
+        </div>
+        <div class="profile-card__content__info">
+          <p class="profile-card__content__title">Location</p>
+          <address class="profile-card__content__value">{{ location }}</address>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+
+  <mat-card-footer class="profile-card__footer">
+    <div class="profile-card__content__divider"></div>
+
+    <div class="profile-card__footer__icon-wrapper">
+      <div
+        (click)="openGithub()"
+        class="profile-card__footer__icon profile-card__footer__git-icon"
+      ></div>
+      <div
+        (click)="openLinkedIn()"
+        class="profile-card__footer__icon profile-card__footer__linkedin-icon"
+      ></div>
+      <div
+        (click)="openTwitter()"
+        class="profile-card__footer__icon profile-card__footer__twitter-icon"
+      ></div>
+      <div
+        (click)="openInstagram()"
+        class="profile-card__footer__icon profile-card__footer__insta-icon"
+      ></div>
+    </div>
+  </mat-card-footer>
+</mat-card>

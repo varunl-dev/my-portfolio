@@ -1,0 +1,145 @@
+.profile-card {
+  background-color: #1e1e1f;
+  padding: 2rem;
+  border: 1px solid #3f3f40;
+  border-radius: 1rem;
+  box-shadow: none;
+  width: 18.32rem;
+  max-width: 18.32rem;
+  position: sticky;
+  top: 60px;
+  &__header {
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    &__content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 1rem;
+      margin: 0 0 1rem 0;
+    }
+    &__name,
+    &__title {
+      text-transform: capitalize;
+      color: #fafafa;
+      margin: 0 0 1rem 0;
+      font-size: 1.5rem;
+    }
+    &__title {
+      padding: 0.5rem;
+      background-color: #3f3f40;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  &__content {
+    padding: 0;
+    margin: 0;
+    &__divider {
+      height: 1px;
+      background-color: #3f3f40;
+    }
+
+    &__item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 2rem 0;
+    }
+    &__icon-box {
+      width: 48px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1rem 0 0;
+      background-color: #201f1f;
+      box-shadow: 0 2px 4px rgba(78, 78, 78, 0.5),
+        0 2px 4px rgba(78, 78, 78, 0.5);
+    }
+    &__icon {
+      width: 16px;
+      height: 16px;
+      background-color: #ffd700;
+    }
+    &__mail-icon {
+      mask: url("/assets/icon/mail.svg") center / contain no-repeat;
+      -webkit-mask: url("/assets/icon/mail.svg") center / contain no-repeat;
+      cursor: pointer;
+    }
+    &__mob-icon {
+      mask: url("/assets/icon/mobile.svg") center / contain no-repeat;
+      -webkit-mask: url("/assets/icon/mobile.svg") center / contain no-repeat;
+      cursor: pointer;
+    }
+    &__dob-icon {
+      mask: url("/assets/icon/calendar.svg") center / contain no-repeat;
+      -webkit-mask: url("/assets/icon/calendar.svg") center / contain no-repeat;
+    }
+    &__location-icon {
+      mask: url("/assets/icon/location.svg") center / contain no-repeat;
+      -webkit-mask: url("/assets/icon/location.svg") center / contain no-repeat;
+    }
+
+    &__info {
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &__title {
+      margin: 0;
+      color: #69696a;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    &__value {
+      color: #fafafa;
+      font-style: normal;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+  }
+
+  &__footer {
+    &__icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0 0 0;
+    }
+    &__icon {
+      background-color: #ffd700;
+      width: 1rem;
+      height: 1rem;
+      cursor: pointer;
+    }
+    &__icon:nth-child(even) {
+      margin: 0 0.7rem;
+    }
+    &__git-icon {
+      mask: url("/assets/icon/github.svg") center / contain no-repeat;
+      -webkit-mask: url("/assets/icon/github.svg") center / contain no-repeat;
+    }
+    &__linkedin-icon {
+      mask: url("/assets/icon/linkedin.svg") center / contain no-repeat;
+      -webkit-mask: url("/assets/icon/linkedin.svg") center / contain no-repeat;
+    }
+    &__twitter-icon {
+      mask: url("/assets/icon/twitter.svg") center / contain no-repeat;
+      -webkit-mask: url("/assets/icon/twitter.svg") center / contain no-repeat;
+    }
+    &__insta-icon {
+      mask: url("/assets/icon/insta.svg") center / contain no-repeat;
+      -webkit-mask: url("/assets/icon/insta.svg") center / contain no-repeat;
+    }
+  }
+}

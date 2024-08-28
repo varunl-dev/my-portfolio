@@ -1,0 +1,20 @@
+<div class="projects" *ngFor="let project of projectDetails">
+  <h1 class="projects__title projects__content">{{ project?.title }}</h1>
+  <h3 class="projects__title__description projects__content">
+    <span class="projects__heading">Description:</span>{{ project?.description }}
+  </h3>
+  <h3 class="projects__title__feature projects__content">
+    <span class="projects__heading">Features:</span>{{ project?.features }}
+  </h3>
+  <h3 class="projects__title__host projects__content">
+    <span class="projects__heading">Hosting:</span>{{ project?.hosting }}
+  </h3>
+  <h3 class="projects__title__tech projects__content">
+    <span class="projects__heading">Technologies Used:</span
+    >{{ project?.technologiesUsed }}
+  </h3>
+  <h3 class="projects__title__link projects__content">
+    <span class="projects__heading">projects URL:</span>
+    <a class="projects__title__url" [href]="project?.projectURL" target="_blank">{{ project?.projectURL }}</a>
+  </h3>
+</div>

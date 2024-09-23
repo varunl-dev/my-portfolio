@@ -16,6 +16,7 @@
   }
   &__name {
     margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
   }
   &__position {
     color: #ffd700;
@@ -48,6 +49,16 @@
       padding: 0.5rem 1rem;
       color: white;
       border: none;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.2rem;
+  }
+  .resume{
+    &__content{
+        font-size: 1rem;
     }
   }
 }

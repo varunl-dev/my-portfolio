@@ -2,6 +2,11 @@
   <div class="left-side">
     <app-profile></app-profile>
   </div>
+  <div class="mob-container">
+    <div class="mob-container__intro">
+      <app-profile></app-profile>
+    </div>
+  </div>
 
   <mat-card class="right-side">
     <div class="right-side__container">
@@ -27,9 +32,9 @@
           <li class="right-side__nav__nav-item">
             <a
               class="right-side__nav__link"
-              routerLink="personal-projects"
+              routerLink="projects"
               routerLinkActive="active"
-              >Personal Projects</a
+              >Projects</a
             >
           </li>
         </ul>
@@ -40,3 +45,35 @@
     </mat-card-content>
   </mat-card>
 </div>
+
+
+<footer class="footer">
+  <nav class="footer__nav">
+    <ul class="footer__nav__nav-list">
+      <li class="footer__nav__nav-item">
+        <a
+          class="footer__nav__link"
+          routerLink="/about-me"
+          routerLinkActive="active"
+          >About Me</a
+        >
+      </li>
+      <li class="footer__nav__nav-item">
+        <a
+          class="footer__nav__link"
+          routerLink="/resume"
+          routerLinkActive="active"
+          >Resume</a
+        >
+      </li>
+      <li class="footer__nav__nav-item">
+        <a
+          class="footer__nav__link"
+          routerLink="projects"
+          routerLinkActive="active"
+          >Projects</a
+        >
+      </li>
+    </ul>
+  </nav>
+</footer>

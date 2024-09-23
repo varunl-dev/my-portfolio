@@ -16,15 +16,15 @@
     <div class="profile-card__content__list">
       <div class="profile-card__content__item">
         <div class="profile-card__content__icon-box">
-          <div
-            class="profile-card__content__icon profile-card__content__mail-icon"
-          ></div>
+          <div class="profile-card__content__icon">
+            <span class="material-icons">mail_outline</span>
+          </div>
         </div>
         <div class="profile-card__content__info">
           <p class="profile-card__content__title">Email</p>
           <a
             href="mailto:varunl.3696@gmail.com"
-            class="profile-card__content__value profile-card__content__value--extra"
+            class="profile-card__content__value"
           >
             {{ mailId }}
           </a>
@@ -33,16 +33,13 @@
 
       <div class="profile-card__content__item">
         <div class="profile-card__content__icon-box">
-          <div
-            class="profile-card__content__icon profile-card__content__mob-icon"
-          ></div>
+          <div class="profile-card__content__icon">
+            <span class="material-icons">phone_iphone</span>
+          </div>
         </div>
         <div class="profile-card__content__info">
           <p class="profile-card__content__title">Mobile</p>
-          <a
-            href="tel:9551799309"
-            class="profile-card__content__value profile-card__content__value--extra"
-          >
+          <a href="tel:9551799309" class="profile-card__content__value">
             {{ mobile }}
           </a>
         </div>
@@ -50,9 +47,9 @@
 
       <div class="profile-card__content__item">
         <div class="profile-card__content__icon-box">
-          <div
-            class="profile-card__content__icon profile-card__content__dob-icon"
-          ></div>
+          <div class="profile-card__content__icon">
+            <span class="material-icons">calendar_today</span>
+          </div>
         </div>
         <div class="profile-card__content__info">
           <p class="profile-card__content__title">Birthday</p>
@@ -64,9 +61,9 @@
 
       <div class="profile-card__content__item">
         <div class="profile-card__content__icon-box">
-          <div
-            class="profile-card__content__icon profile-card__content__location-icon"
-          ></div>
+          <div class="profile-card__content__icon">
+            <span class="material-icons">place</span>
+          </div>
         </div>
         <div class="profile-card__content__info">
           <p class="profile-card__content__title">Location</p>
@@ -80,22 +77,131 @@
     <div class="profile-card__content__divider"></div>
 
     <div class="profile-card__footer__icon-wrapper">
-      <div
-        (click)="openGithub()"
-        class="profile-card__footer__icon profile-card__footer__git-icon"
-      ></div>
+      <div (click)="openGithub()" class="profile-card__footer__icon">
+        <img
+          class="profile-card__footer__icon-image"
+          src="assets/icon/github.png"
+        />
+      </div>
       <div
         (click)="openLinkedIn()"
         class="profile-card__footer__icon profile-card__footer__linkedin-icon"
-      ></div>
-      <div
+      >
+        <img
+          class="profile-card__footer__icon-image"
+          src="assets/icon/linkedin.png"
+        />
+      </div>
+      <!-- <div
         (click)="openTwitter()"
         class="profile-card__footer__icon profile-card__footer__twitter-icon"
       ></div>
       <div
         (click)="openInstagram()"
         class="profile-card__footer__icon profile-card__footer__insta-icon"
-      ></div>
+      ></div> -->
     </div>
   </mat-card-footer>
+</mat-card>
+
+<mat-card class="mob-card">
+  <mat-card-header class="mob-card__header">
+    <div class="mob-card__header__wrapper">
+      <img
+        class="mob-card__header__img"
+        src="assets/images/my-avatar.png"
+        alt="profile img"
+      />
+      <div class="mob-card__header__content">
+        <p class="mob-card__header__name">{{ name }}</p>
+        <p class="mob-card__header__title">{{ title }}</p>
+      </div>
+    </div>
+  </mat-card-header>
+  
+  <button (click)="toggleContacts()" class="show-content-btn">
+    <span class="material-icons">
+      {{ showContacts ? "keyboard_arrow_up" : "keyboard_arrow_down" }}</span
+    >
+  </button>
+  <div *ngIf="showContacts" class="mob-card__content-section">
+    <mat-card-content class="mob-card__content">
+      <div class="mob-card__content__divider"></div>
+      <div class="mob-card__content__list">
+        <div class="mob-card__content__item">
+          <div class="mob-card__content__icon-box">
+            <div class="mob-card__content__icon">
+              <span class="material-icons">mail_outline</span>
+            </div>
+          </div>
+          <div class="mob-card__content__info">
+            <p class="mob-card__content__title">Email</p>
+            <a
+              href="mailto:varunl.3696@gmail.com"
+              class="mob-card__content__value"
+            >
+              {{ mailId }}
+            </a>
+          </div>
+        </div>
+
+        <div class="mob-card__content__item">
+          <div class="mob-card__content__icon-box">
+            <div class="mob-card__content__icon">
+              <span class="material-icons">phone_iphone</span>
+            </div>
+          </div>
+          <div class="mob-card__content__info">
+            <p class="mob-card__content__title">Mobile</p>
+            <a href="tel:9551799309" class="mob-card__content__value">
+              {{ mobile }}
+            </a>
+          </div>
+        </div>
+
+        <div class="mob-card__content__item">
+          <div class="mob-card__content__icon-box">
+            <div class="mob-card__content__icon">
+              <span class="material-icons">calendar_today</span>
+            </div>
+          </div>
+          <div class="mob-card__content__info">
+            <p class="mob-card__content__title">Birthday</p>
+            <div class="mob-card__content__value">
+              {{ DOB }}
+            </div>
+          </div>
+        </div>
+
+        <div class="mob-card__content__item">
+          <div class="mob-card__content__icon-box">
+            <div class="mob-card__content__icon">
+              <span class="material-icons">place</span>
+            </div>
+          </div>
+          <div class="mob-card__content__info">
+            <p class="mob-card__content__title">Location</p>
+            <address class="mob-card__content__value">{{ location }}</address>
+          </div>
+        </div>
+      </div>
+      <div class="mob-card__content__divider"></div>
+    </mat-card-content>
+    <mat-card-footer class="mob-card__footer">
+      <div class="mob-card__footer__icon-wrapper">
+        <div (click)="openGithub()" class="mob-card__footer__icon">
+          <img
+            class="mob-card__footer__icon-image"
+            src="assets/icon/github.png"
+          />
+        </div>
+        <div (click)="openLinkedIn()" class="mob-card__footer__icon">
+          <img
+            class="mob-card__footer__icon-image"
+            src="assets/icon/linkedin.png"
+          />
+        </div>
+      </div>
+    </mat-card-footer>
+  </div>
 </mat-card>

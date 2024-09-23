@@ -12,6 +12,11 @@ export class ProfileComponent {
   mobile: string = '+91 9551799309';
   DOB: string = '03-06-1996';
   location: string = 'Chennai, Tamil Nadu';
+  showContacts: boolean = false;
+
+  toggleContacts() {
+    this.showContacts = !this.showContacts;
+  }
 
   openInstagram(): void {
     window.open(

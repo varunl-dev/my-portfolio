@@ -1,7 +1,9 @@
-<div>
+
   <h1 class="title">work experience</h1>
   <div class="resume" *ngFor="let experience of workExperiences">
-    <h2 class="resume__name resume__content">{{ experience?.companyName }}</h2>
+    <h2 class="resume__name resume__content">
+      {{ experience?.companyName }}
+    </h2>
     <h2 class="resume__position resume__content">
       {{ experience?.position }} | {{ experience?.startDate }} -
       {{ experience?.endDate }}
@@ -49,4 +51,4 @@
       Download Resume
     </button>
   </div>
-</div>
+

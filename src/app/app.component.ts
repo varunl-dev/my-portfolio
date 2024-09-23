@@ -7,7 +7,6 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'portfolio';
   currentRouteName = '';
 
   constructor(private router: Router) {}

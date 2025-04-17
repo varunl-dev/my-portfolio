@@ -2,11 +2,16 @@
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: capitalize;
-  margin: 0 0 1rem 0;
+  text-decoration: underline;
+  margin: 1.5rem 0 1rem 0;
+  &--education,
+  &--certificate {
+    margin: 5rem 0 1rem 0;
+  }
 }
-.title:nth-child(even) {
-  margin: 5rem 0 1rem 0;
-}
+// .title:nth-child(even) {
+//   margin: 3rem 0 1rem 0;
+// }
 .resume {
   margin: 0 0 2rem 0;
   &__content {
@@ -56,9 +61,9 @@
   .title {
     font-size: 1.2rem;
   }
-  .resume{
-    &__content{
-        font-size: 1rem;
+  .resume {
+    &__content {
+      font-size: 1rem;
     }
   }
 }

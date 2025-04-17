@@ -14,8 +14,8 @@ export class AppComponent {
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.currentRouteName = this.router.url.split('/').pop()?.replace('-', ' ') || '';
-        console.log('Current route name: ', this.currentRouteName);
+        this.currentRouteName =
+          this.router.url.split('/').pop()?.replace('-', ' ') || '';
       }
     });
   }
